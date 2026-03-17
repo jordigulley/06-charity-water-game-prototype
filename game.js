@@ -145,6 +145,11 @@ let scoretxt;
 let spawner_interval_id;
 let win_condition
 function init() {
+    if (engine.running) {
+        engine.restart();
+    } else {
+        engine.start();
+    }
     score = 0;
     if (spawner_interval_id != undefined) {
         window.clearInterval(spawner_interval_id);
@@ -161,9 +166,7 @@ function init() {
     reset_btn.position.x = 12;
     reset_btn.position.y = 72;
 }
-engine.start();
-init();
+window.onload = init;
 window.addEventListener("keypress", (ev) => {
-    engine.restart();
     init();
 });
