@@ -1,14 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Game</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <canvas id="game" width="640px" height="480px"></canvas>
-    <script src="engine.js"></script>
-    <script src="game.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Charity Water Game</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="toolbar">
+                <img class="logo" src="./img/cw_logo_horizontal.png" />
+                <p>Fill the Can! 12 drops to win.</p>
+
+                <div class="max" id="milestone"></div>
+                <p id="difficulty">Difficulty:</p>
+                <button type="button" id="change">Change Difficulty</button>
+                <a href="https://www.charitywater.org/" target="_blank"
+                    ><button type="button">Donate</button></a
+                >
+                <button type="button" class="err" id="reset">Reset</button>
+            </div>
+            <div class="wrapper">
+                <canvas id="game" width="640px" height="480px"></canvas>
+            </div>
+        </div>
+        <script src="engine.js"></script>
+        <script src="game.js"></script>
+    </body>
 </html>
